@@ -11,11 +11,11 @@ oc apply -f https://raw.githubusercontent.com/siamaksade/shipwright-cli/tekton/t
 
 ## Parameters
 
-| name      | description                                 | default                                  |
-| --------- | ------------------------------------------- | ---------------------------------------- |
-| SHP_IMAGE | `shp` CLI container image to run this task. | quay.io/siamaksade/shipwright-cli:latest |
-| ARGS      | The arguments to pass to the `shp` CLI.     | --help                                   |
-| SCRIPT    | `shp` CLI script to execute                 | shp \$@                                  |
+| name      | description                                 | default                                      |
+| --------- | ------------------------------------------- | ---------------------------------------------|
+| SHP_IMAGE | `shp` CLI container image to run this task. | `quay.io/siamaksade/shipwright-cli:latest`   |
+| ARGS      | The arguments to pass to the `shp` CLI.     | `--help`                                     |
+| SCRIPT    | `shp` CLI script to execute                 | `shp \$@`                                    |
 
 ## Workspaces
 
