@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  labels:
+  name: sample-shipwright-build
+spec:
+  params:
+    - default: 'sample-s2i-nodejs'
+      name: BUILD_NAME
+      type: string
+  tasks:
+    - name: build
+      params:
+        - name: SCRIPT
+          value:  |
+            shp build run $(params.BUILD_NAME) --follow
+      taskRef:
+        kind: Task
+        name: shp
